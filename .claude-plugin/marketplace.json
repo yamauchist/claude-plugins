@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "yamauchist-plugins",
+  "owner": {
+    "name": "yamauchist"
+  },
+  "metadata": {
+    "description": "yamauchist が公開する Claude Code プラグイン / スキル集",
+    "version": "0.1.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": []
+}

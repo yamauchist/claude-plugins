@@ -1,0 +1,13 @@
+{
+  "name": "plugin-template",
+  "version": "0.1.0",
+  "description": "プラグインの説明をここに書く",
+  "author": {
+    "name": "yamauchist",
+    "url": "https://github.com/yamauchist"
+  },
+  "homepage": "https://github.com/yamauchist/claude-plugins",
+  "repository": "https://github.com/yamauchist/claude-plugins",
+  "license": "MIT",
+  "keywords": []
+}
