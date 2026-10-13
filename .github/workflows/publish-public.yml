@@ -1,0 +1,36 @@
+# Mirror main to the public marketplace repository.
+# Development happens in the private repo (yamauchist/claude-plugins-dev);
+# only main is pushed to yamauchist/claude-plugins, so work-in-progress
+# branches and pull requests never become public.
+#
+# Setup: a deploy key with write access on the public repo, its private
+# half stored here as the PUBLIC_DEPLOY_KEY secret.
+name: Publish main to public repo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publish-public
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    # this file is mirrored too; never run in the public copy
+    if: github.repository == 'yamauchist/claude-plugins-dev'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Push main to yamauchist/claude-plugins
+        env:
+          DEPLOY_KEY: ${{ secrets.PUBLIC_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git push git@github.com:yamauchist/claude-plugins.git HEAD:refs/heads/main
