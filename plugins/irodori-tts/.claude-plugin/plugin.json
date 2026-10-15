@@ -1,0 +1,20 @@
+{
+  "name": "irodori-tts",
+  "version": "0.1.0",
+  "description": "ローカルの Irodori-TTS（v4-Small / OpenAI 互換サーバー）で日本語音声を安定して合成するためのノウハウ。サーバー起動、参照音声づくり、短い文・記号だけの文の扱い、文字起こしによる検品まで。",
+  "author": {
+    "name": "yamauchist",
+    "url": "https://github.com/yamauchist"
+  },
+  "homepage": "https://github.com/yamauchist/claude-plugins",
+  "repository": "https://github.com/yamauchist/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "tts",
+    "irodori-tts",
+    "voice",
+    "japanese",
+    "speech-synthesis",
+    "narration"
+  ]
+}

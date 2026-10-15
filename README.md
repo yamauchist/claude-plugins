@@ -26,7 +26,7 @@ Claude Code でマーケットプレイスを追加します。
 
 | プラグイン | 内容 |
 | --- | --- |
-| _(準備中)_ | |
+| [irodori-tts](plugins/irodori-tts) | ローカルの Irodori-TTS で日本語音声を安定して合成するノウハウ（起動・参照音声づくり・短い文の扱い・文字起こし検品） |
 
 ## リポジトリ構成
 
@@ -40,6 +40,8 @@ plugins/
     skills/
       <skill-name>/
         SKILL.md          # スキル本体
+        references/       # 必要に応じて読む詳細資料（任意）
+        scripts/          # スキルから呼ぶスクリプト（任意）
 templates/
   plugin-template/        # 新規プラグイン用の雛形（マーケットプレイス対象外）
 ```
