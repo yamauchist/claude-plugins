@@ -27,6 +27,23 @@
         "speech-synthesis",
         "narration"
       ]
+    },
+    {
+      "name": "improve-loop",
+      "source": "./plugins/improve-loop",
+      "description": "サブエージェントに改善点を洗い出させ、判断の要らないものは自動で直し、判断の要るものは 4 件ずつ相談しながら、重要度が中以上の指摘がなくなるまでリポジトリの改善を繰り返すスキル",
+      "version": "0.1.0",
+      "author": {
+        "name": "yamauchist"
+      },
+      "category": "productivity",
+      "keywords": [
+        "review",
+        "refactoring",
+        "code-quality",
+        "subagent",
+        "loop"
+      ]
     }
   ]
 }
